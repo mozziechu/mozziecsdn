@@ -87,4 +87,9 @@ print('把元素插入到指定的位置',list,'\n插入的方法 > list.insert(
 # # 要删除list末尾的元素
 print('要删除list末尾的元素',list,'\n插入的方法 > list.pop():',list.pop())
 # # 要删除list指定的位置的元素
-print('要删除list指定的位置的元素',list,'\n插入的方法 > list.pop(10):',list.pop(10))
+print('要删除list指定的位置的元素',list,'\n插入的方法 > list.pop(9):',list.pop(9))
+# # 某个元素替换成别的元素，可以直接赋值给对应的索引位置
+list[0]=10
+print('把索引第0个换成10吧', list, '\n替换的方法 > list[0] = 10')
+
+
