@@ -92,4 +92,85 @@ print('要删除list指定的位置的元素',list,'\n插入的方法 > list.pop
 list[0]=10
 print('把索引第0个换成10吧', list, '\n替换的方法 > list[0] = 10')
 
+tuple_1 = (0,)
+tuple_2 = (0,1,2,3,4,[5,6,7],[8,9,10])
+print(tuple_1,tuple_2)
 
+# 条件判断
+ifs = 20
+if ifs<=15:
+    print('<= 15')
+else:
+    print('> 15')
+
+if ifs < 15:
+    print('< 15')
+elif ifs >= 15:
+    print('>= 15')
+else:
+    print('= 15')
+
+#  数据类型转换
+s = input('birth: ')
+# # str 转 int()型数据
+birth = int(s)
+if birth < 2000:
+    print('00前')
+else:
+    print('00后')
+# # Python提供一个range()函数，可以生成一个整数序列
+print(range(5))
+# # list()函数，把序列转list类型
+
+
+# 循环
+# # for
+arrays = ['ma', 'ms', 'mi']
+for arr in arrays:
+    print(arr)
+# # while
+whiles = 0
+w = 9
+while w > 0:
+    whiles = whiles + w
+    w = w - 2
+print(whiles)
+# # break语句可以提前退出循环
+b = 1
+while b <= 100:
+    if b > 10: # 当n = 11时，条件满足，执行break语句
+        break # break语句会结束当前循环
+    print(b)
+    b = b + 1
+print('break END')
+# # continue语句，跳过当前的这次循环，直接开始下一次循环
+c = 0
+while c < 10:
+    c = c + 1
+    if c % 2 == 0: # 如果n是偶数，执行continue语句
+        continue # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    print(c)
+# # break语句可以在循环过程中直接退出循环，而continue语句可以提前结束本轮循环
+# # 并直接开始下一轮循环。这两个语句通常都必须配合if语句使用。
+
+# dict
+# # Python内置了字典：dict的支持，dict全称dictionary，在其他语言中也称为map
+# # 使用键-值（key-value）存储，具有极快的查找速度
+dicts = {'a': 9, 'b': 8}
+print(dicts['a'])
+# # 要避免key不存在的错误，有两种办法，一是通过in判断key是否存在：
+print('a' in dicts)
+# # 通过dict提供的get()方法，如果key不存在，可以返回None，或者自己指定的value
+dicts.get('c', 99)
+print(dicts,'dicts.get("c", 99)')
+# # 要删除一个key，用pop(key)方法，对应的value也会从dict中删除
+print(dicts.pop('a'))
+# # # dict的key必须是不可变对象,这个通过key计算位置的算法称为哈希算法（Hash）要保证hash的正确性，作为key的对象就不能变。
+# # # ist比较，dict有以下几个特点：
+# # # # 查找和插入的速度极快，不会随着key的增加而变慢；
+# # # # 需要占用大量的内存，内存浪费多。
+
+# set
+# # 和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key
+sets = set([1,2,3])
+print(sets)
