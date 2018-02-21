@@ -174,3 +174,44 @@ print(dicts.pop('a'))
 # # 和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key
 sets = set([1,2,3])
 print(sets)
+# # 通过add(key)方法可以添加元素到set中，可以重复添加，但不会有效果
+sets.add(4)
+print(sets)
+# # 通过remove(key)方法可以删除元素
+sets.remove(4)
+print(sets)
+# # 做数学意义上的交集、并集等操作
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
+print(s1 & s2)
+print(s1 | s2)
+# # 当把tuple这个不变对象，放入dict & set中测试其结果
+
+# 函数 python本身内置了很多函数
+# python的函数官网 >>>
+# http://docs.python.org/3/library/functions.html
+# # 以数据类型转换位列
+print(int('123'))
+print(int(12.34))
+print(float('12'))
+print(str(1.23))
+print(str(100))
+print(bool(1))
+print(bool(''))
+
+# 在Python中，定义一个函数要使用def语句，依次写出函数名、括号、括号中的参数和冒号:
+# 然后，在缩进块中编写函数体，函数的返回值用return语句返回
+def my_abs(x):
+    if not isinstance(x, (int, float)): # 对参数类型做检查，只允许整数和浮点数类型的参数
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+print(my_abs(-12))
+# 空函数
+# pass语句什么都不做
+# 实际上pass可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个pass，让代码能运行起来。
+def nop():
+    pass
+
